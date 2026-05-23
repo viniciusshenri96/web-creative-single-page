@@ -39,6 +39,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -109,6 +111,13 @@ ol {
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+  /* height: 100%; */
+  object-fit: cover; /* Fills container, maintains ratio, crops edges */
+  object-position: left; /* Centers the crop */
+}
+
 body {
   /* 4. Increase line-height */
   line-height: 1.5;
@@ -120,6 +129,8 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+  /* padding-left: 165px;
+  padding-right: 165px; */
 }
 
 /*==========HEADER==========*/
@@ -155,6 +166,7 @@ body {
 }
 
 .btn__header {
+  display: inline-block;
   font:
     400 1rem / 2 "Commissioner",
     sans-serif;
@@ -164,6 +176,46 @@ body {
   color: var(--color-white);
 }
 
+/*==========HERO==========*/
+
+.hero {
+  display: grid;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 550px;
+  grid-area: 1/1;
+  z-index: 1;
+}
+
+.hero__title {
+  margin-bottom: 40px;
+}
+
+.hero__text {
+  margin-bottom: 1rem;
+  max-width: 406px;
+}
+
+.btn__hero {
+  display: inline-block;
+  font:
+    400 1.125rem / 2 "Commissioner",
+    sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 25px 40px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.hero__img {
+  grid-area: 1 / 1;
+  margin-left: 275px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 980px) {
   .header {
     margin-left: 40px;
