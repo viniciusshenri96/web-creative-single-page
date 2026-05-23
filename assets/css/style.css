@@ -1,0 +1,178 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+
+:root {
+  /* Colors */
+  --color-red: #f94f4f;
+  --color-bgBlack: #191921;
+  --color-white: #ffffff;
+  --color-textBlack: #000000;
+}
+
+/* CLASS FONTS */
+.font-body {
+  font:
+    400 1.125rem / 1.77 "Commissioner",
+    sans-serif;
+}
+
+.font-h1 {
+  font:
+    800 5rem / 1.1 "Commissioner",
+    sans-serif;
+}
+
+.font-h2 {
+  font:
+    800 3.5rem / 1.14 "Commissioner",
+    sans-serif;
+}
+
+.font-h3 {
+  font:
+    800 1.25rem / 1.6 "Commissioner",
+    sans-serif;
+}
+
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*==========HEADER==========*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__bg {
+  background-color: var(--color-red);
+  padding: 56px 165px 58px 69px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding-left: 0;
+}
+
+.nav__item {
+  font:
+    400 1rem / 2 "Commissioner",
+    sans-serif;
+  color: var(--color-white);
+}
+
+.btn__header {
+  font:
+    400 1rem / 2 "Commissioner",
+    sans-serif;
+  text-decoration: none;
+  padding: 20px 45px;
+  background-color: var(--color-textBlack);
+  color: var(--color-white);
+}
+
+@media (max-width: 980px) {
+  .header {
+    margin-left: 40px;
+  }
+  .nav {
+    gap: 32px;
+  }
+  .nav__bg {
+    background-color: var(--color-red);
+    padding: 57px 40px 57px 33px;
+  }
+}
