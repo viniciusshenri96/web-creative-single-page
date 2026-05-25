@@ -15,20 +15,30 @@
     <title>Frontend Mentor | Creative single page site</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header container">
-      <img src="assets/images/desktop/logo.svg" alt="logo creative" />
+      <a href="/">
+        <img src="assets/images/desktop/logo.svg" alt="logo creative" />
+      </a>
       <div class="nav__bg">
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item">About</li>
-            <li class="nav__item">Service</li>
-            <li class="nav__item">Projects</li>
+            <li class="nav__item">
+              <a href="/">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="/">Service</a>
+            </li>
+            <li class="nav__item">
+              <a href="/">Projects</a>
+            </li>
           </ul>
           <a href="/" class="btn btn__header">Schedule a call</a>
         </nav>
       </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero container">
       <div class="hero__content">
         <h1 class="hero__title font-h1">Branding & website design agency</h1>
@@ -44,6 +54,63 @@
         src="assets/images/desktop/image-hero.jpg"
         alt=""
       />
+    </section>
+
+    <!-- DESIGN -->
+    <section class="design container">
+      <img src="assets/images/desktop/image-strategic.jpg" alt="" />
+      <div class="design__content">
+        <h2 class="design__title font-h2"><span>Design</span> is strategic.</h2>
+        <p class="design__text font-body">
+          “A well-crafted design strategy consistently produces desired outcomes
+          and brand awareness. We are firm believers that success lies in
+          creative collaboration with our clients.”
+        </p>
+        <a href="/" class="btn__design">Schedule a Call</a>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="approach container">
+      <h2 class="approach__title font-h2">
+        Our approach for creating a winning brand
+      </h2>
+      <div class="approach__content">
+        <ul class="approach__list">
+          <li class="approach__item">
+            <span class="approach__number">01</span>
+            <div class="approach__desc">
+              <h3 class="approach__subtitle font-h3">Brand Strategy</h3>
+              <p class="approach__text">
+                Brand strategy is critical for long-term success. Outshining
+                competitors and capturing the target audience are key.
+              </p>
+            </div>
+          </li>
+
+          <li class="approach__item">
+            <span class="approach__number">02</span>
+            <div class="approach__desc">
+              <h3 class="approach__subtitle font-h3">Brand Design</h3>
+              <p class="approach__text">
+                Keeping the brand design unique and meaningful helps in
+                communicating the brand’s timeless value effectively.
+              </p>
+            </div>
+          </li>
+
+          <li class="approach__item">
+            <span class="approach__number">03</span>
+            <div class="approach__desc">
+              <h3 class="approach__subtitle font-h3">Web Design</h3>
+              <p class="approach__text">
+                A beautifully crafted website is the best tool for brand
+                awareness, and ultimately results in increased revenues.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </body>
 </html>
