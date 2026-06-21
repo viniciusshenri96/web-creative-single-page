@@ -38,7 +38,6 @@
       </div>
     </header>
 
-    <!-- HERO -->
     <section class="hero container">
       <div class="hero__content">
         <h1 class="hero__title font-h1">Branding & website design agency</h1>
@@ -49,16 +48,50 @@
         </p>
         <a href="/" class="btn__hero">Learn More</a>
       </div>
-      <img
+      <!-- <img
         class="hero__img"
         src="assets/images/desktop/image-hero.jpg"
         alt=""
-      />
+      /> -->
+
+      <picture class="hero__img">
+        <!-- Imagem para telas grandes (monitores) -->
+        <source
+          media="(max-width: 500px)"
+          srcset="assets/images/mobile/image-hero.jpg"
+        />
+        <!-- Imagem padrão para celulares (ou navegadores que não suportam a tag) -->
+        <img
+          src="assets/images/desktop/image-hero.jpg"
+          alt="Exemplo de paisagem responsiva"
+          loading="lazy"
+        />
+      </picture>
     </section>
 
-    <!-- DESIGN -->
     <section class="design container">
-      <img src="assets/images/desktop/image-strategic.jpg" alt="" />
+      <!-- <img src="assets/images/desktop/image-strategic.jpg" alt="" /> -->
+
+      <picture>
+        <!-- Imagem para telas grandes (monitores) -->
+        <source
+          media="(max-width: 500px)"
+          srcset="assets/images/mobile/image-strategic.jpg"
+        />
+        <source
+          media="(max-width: 1000px)"
+          srcset="assets/images/tablet/image-strategic.jpg"
+        />
+
+        <!-- Imagem padrão para celulares (ou navegadores que não suportam a tag) -->
+        <img
+          class="design__img"
+          src="assets/images/desktop/image-strategic.jpg"
+          alt="Exemplo de paisagem responsiva"
+          loading="lazy"
+        />
+      </picture>
+
       <div class="design__content">
         <h2 class="design__title font-h2"><span>Design</span> is strategic.</h2>
         <p class="design__text font-body">
@@ -70,7 +103,6 @@
       </div>
     </section>
 
-    <!-- APPROACH -->
     <section class="approach container">
       <div class="approach__container">
         <h2 class="approach__title font-h2">
@@ -115,7 +147,6 @@
       </div>
     </section>
 
-    <!-- BRAND -->
     <section class="brand container">
       <div class="brand__content">
         <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
@@ -132,9 +163,10 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
-      <h2 class="font-h2">Let's build something great together.</h2>
+      <h2 class="footer__title font-h2">
+        Let's build something great together.
+      </h2>
       <a href="/" class="btn btn__header">Schedule a call</a>
     </footer>
   </body>
