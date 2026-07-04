@@ -703,7 +703,6 @@ body {
   .approach__container {
     grid-template-columns: 1fr;
     margin-top: 0px;
-    /* gap: 93px; */
     max-width: 100%;
   }
 

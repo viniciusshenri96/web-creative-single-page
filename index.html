@@ -18,26 +18,31 @@
     <!-- HEADER -->
     <header class="header container">
       <a href="/">
-        <img src="assets/images/desktop/logo.svg" alt="logo creative" />
+        <img
+          src="assets/images/desktop/logo.svg"
+          alt="logo creative"
+          class="header__logo"
+        />
       </a>
       <div class="nav__bg">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="/">About</a>
+              <a class="nav__link" href="#section--1">About</a>
             </li>
             <li class="nav__item">
-              <a href="/">Service</a>
+              <a class="nav__link" href="#section--2">Service</a>
             </li>
             <li class="nav__item">
-              <a href="/">Projects</a>
+              <a class="nav__link" href="#section--3">Projects</a>
             </li>
           </ul>
-          <a href="/" class="btn btn__header">Schedule a call</a>
+          <a href="/" class="nav__link btn btn__header">Schedule a call</a>
         </nav>
       </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero container">
       <div class="hero__content">
         <h1 class="hero__title font-h1">
@@ -64,7 +69,8 @@
       </picture>
     </section>
 
-    <section class="design container">
+    <!-- DESIGNER -->
+    <section class="design container" id="section--1">
       <picture>
         <source
           media="(max-width: 500px)"
@@ -93,7 +99,8 @@
       </div>
     </section>
 
-    <section class="approach container">
+    <!-- APPROACH -->
+    <section class="approach container" id="section--2">
       <div class="approach__container">
         <h2 class="approach__title font-h2">
           Our approach for creating a winning<br />brand
@@ -137,7 +144,8 @@
       </div>
     </section>
 
-    <section class="brand container">
+    <!-- BRAND -->
+    <section class="brand container" id="section--3">
       <div class="brand__content">
         <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
         <div class="brand__icons">
@@ -167,11 +175,14 @@
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <h2 class="footer__title font-h2">
         Let's build something great together.
       </h2>
       <a href="/" class="btn btn__header">Schedule a call</a>
     </footer>
+
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
