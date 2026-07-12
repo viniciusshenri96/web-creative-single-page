@@ -3,7 +3,7 @@
 
 :root {
   /* Colors */
-  --color-red: #f94f4f;
+  --color-red: rgb(249, 79, 79);
   --color-bgBlack: #191921;
   --color-white: #ffffff;
   --color-textBlack: #000000;
@@ -140,6 +140,7 @@ body {
 }
 
 /*==========HEADER==========*/
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -150,6 +151,7 @@ body {
 .nav__bg {
   background-color: var(--color-red);
   padding: 56px 165px 58px 69px;
+  z-index: 100;
 }
 
 .nav {
@@ -194,6 +196,29 @@ body {
 
 .btn__header:hover {
   background-color: #434356;
+}
+
+.nav__bg.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 899;
+  width: 100%;
+  background-color: rgba(239, 79, 79, 0.95);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav.sticky {
+  justify-content: end;
+  z-index: 1;
+}
+
+.header__logo.sticky {
+  position: fixed;
+  top: 56px;
+  left: 165px;
+  z-index: 999;
+  filter: contrast(4.75);
 }
 
 /*==========HERO==========*/
@@ -379,7 +404,7 @@ body {
   background-color: var(--color-textBlack);
   padding: 152px 125px 152px 165px;
   grid-area: 1 / 1;
-  z-index: 999;
+  z-index: 9;
   position: relative;
 }
 

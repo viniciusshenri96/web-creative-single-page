@@ -35,3 +35,27 @@ nav.addEventListener("mouseout", function (e) {
     });
   }
 });
+
+const header = document.querySelector(".header");
+const navBg = document.querySelector(".nav__bg");
+const headerLogo = document.querySelector(".header__logo");
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    navBg.classList.add("sticky");
+    headerLogo.classList.add("sticky");
+    nav.classList.add("sticky");
+  } else {
+    navBg.classList.remove("sticky");
+    headerLogo.classList.remove("sticky");
+    nav.classList.remove("sticky");
+  }
+};
+
+const headerObserve = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+});
+
+headerObserve.observe(header);
