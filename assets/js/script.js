@@ -59,3 +59,56 @@ const headerObserve = new IntersectionObserver(stickyNav, {
 });
 
 headerObserve.observe(header);
+
+const slides = document.querySelectorAll(".brand__slide");
+const title = document.querySelector(".brand__title");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+
+const textArr = [
+  "Brand naming & guidelines",
+  "Brand identity & merchandise",
+  "Brand identity & web design",
+];
+let curSlide = 0;
+let maxSlide = slides.length;
+
+const goToSlide = function (curSlide) {
+  slides.forEach(function (s, i) {
+    s.style.transform = `translateX(${100 * (i - curSlide)}%)`;
+
+    if (i < curSlide) {
+      return (s.style.display = "none");
+    } else return (s.style.display = "grid");
+  });
+};
+
+goToSlide(0);
+
+const nextSlide = function (e) {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  title.textContent = textArr[curSlide];
+  goToSlide(curSlide);
+};
+
+const prevSlide = function (e) {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+  title.textContent = textArr[curSlide];
+  goToSlide(curSlide);
+};
+
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+
+window.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") nextSlide();
+  if (e.key === "ArrowLeft") prevSlide();
+});
